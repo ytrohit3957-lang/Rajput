@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        #about {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            padding-top: 8rem;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text span {
+            color: var(--primary);
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            background: #e2e8f0;
+            border-radius: 20px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Experience & Projects */
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--primary);
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Contact */
+        .contact-container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            #about {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">PORTFOLIO</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="hero-text">
+            <h1>Hi, I'm <span>[Your Name]</span></h1>
+            <p style="font-size: 1.25rem; color: var(--gray); margin-bottom: 2rem;">
+                [Professional Headline: e.g., Senior Full Stack Developer & UX Enthusiast]
+            </p>
+            <p>[Paste your professional summary here. A short 2-3 sentence overview of your career and goals.]</p>
+            <br>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+        <img src="https://via.placeholder.com/300" alt="Profile Photo" class="profile-img">
+    </section>
+
+    <section id="skills">
+        <h2 style="margin-bottom: 2rem;">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><strong>Languages</strong><br>[e.g. Python, JS]</div>
+            <div class="skill-card"><strong>Frameworks</strong><br>[e.g. React, Node]</div>
+            <div class="skill-card"><strong>Tools</strong><br>[e.g. Docker, Git]</div>
+            <div class="skill-card"><strong>Design</strong><br>[e.g. Figma, Adobe]</div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 style="margin-bottom: 2rem;">Work Experience</h2>
+        
+        <div class="card">
+            <h3>[Job Title] • [Company Name]</h3>
+            <span class="date">[Start Date] — [End Date/Present]</span>
+            <ul>
+                <li>[Key achievement or responsibility]</li>
+                <li>[Quantifiable result e.g., Improved performance by 20%]</li>
+                <li>[Technology used]</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>[Job Title] • [Company Name]</h3>
+            <span class="date">[Start Date] — [End Date]</span>
+            <ul>
+                <li>[Key achievement or responsibility]</li>
+                <li>[Technology used]</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 style="margin-bottom: 2rem;">Key Projects</h2>
+        <div class="card">
+            <h3>[Project Name]</h3>
+            <p>[Describe the problem you solved and the tools you used.]</p>
+            <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 600; display: inline-block; margin-top: 1rem;">View Project →</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Let's Connect</h2>
+            <p style="margin-bottom: 2rem; color: var(--gray);">Currently open to new opportunities and collaborations.</p>
+            <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+            <div class="social-links">
+                <a href="[LinkedIn Link]" style="color: var(--dark);">LinkedIn</a>
+                <a href="[GitHub Link]" style="color: var(--dark);">GitHub</a>
+                <a href="[Twitter/Portfolio Link]" style="color: var(--dark);">Other</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Your Name]. Built with precision.</p>
+    </footer>
+
+</body>
+  </html>
